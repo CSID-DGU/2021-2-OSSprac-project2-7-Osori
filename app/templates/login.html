@@ -1,18 +1,22 @@
-<from action = ""method = post>
-    <d1>
-        { % if error %}
+<!DOCTYPE html>
+<html>
+  <h1>OSSP 계정 로그인</h1>
+    {% if error %}
         <p><strong>Error:</strong> {{ error }}
-        % endif %
+     {% endif %}
 
+  <body>
+    <form action="" method="post">
+      <dl>
         <dt> 아이디 :</dt>
         <dd>
-            <input type = "text" name ="username"
-            value = "{{ request.form.username }}">
+          <input type="text" name="username"    
+            value = "{{request.form.username }}">
         </dd>
-        <dt>비밀번호 : </dt>
-        <dd><input type ="password" name = "password" ></dd>
-       
-        <d1>
-        <p><input type = "submit" value ="Login"></p>
-    
-</from>
+        <dt> 비밀번호 :</dt>
+        <dd><input type="password" name="password"/></dd>
+      </dl>
+      <p><input type="submit" value="Login"></p>
+    </form>
+  </body>
+</html>
