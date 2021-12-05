@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html>
+   <body>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>OSSP-survey</title>
+   </head>
+    <h1> 주문하기 </h1>
+    <body>
+      <form action = "/submit" method = "POST">
+        주문자 : <input type ="text" name ="uname" value=""><br>
+        핸드폰 번호 : <input type ="text" name="number" value=""><br>
+
+        기종 : <select>
+         <option value="type">13 mini</option>
+             <option value="type">13</option>
+             <option value="type">13 pro</option>
+             <option value="type">13 pro max</option>
+             <option value="type">12 mini</option>
+             <option value="type">12/12 pro</option>
+             <option value="type">12 pro max</option>
+          </select><br>
+
+          색깔: <select>
+            <option value="color">레드</option>
+                <option value="color">네이비</option>
+                <option value="color">블랙</option>
+                <option value="color">스톤</option>
+                <option value="color">인디핑크</option>
+                <option value="color">레몬</option>
+                <option value="color">블루</option>
+             </select><br>
+
+      인쇄 문구: 
+         <input type="radio" name ="print" value="yes">네
+         <input type="radio" name ="print" value="no">아니오<br>
+         </div>
+                 
+      인쇄 문구 :<br> <textarea name ="" id="" cols="40" rows="5"> </textarea>
+
+      
+      </form>
+      <input type="submit" value="확인">
+   </body>
+</html>
+
