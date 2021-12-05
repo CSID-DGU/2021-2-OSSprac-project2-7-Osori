@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+    <body>
+        <h1>주문 확인 페이지</h1>
+
+        <form>
+            <input type="button" value="뒤로가기" onClick="history.go(-1)">
+        </form>
+        
+        <li>주문번호 : {{orderNum}}</li>
+        {% for key, value in data.items() %}
+                <li>{{ key }} : {{ value }}</li>
+        {% endfor %}
+    </body>
+</html>

@@ -2,9 +2,9 @@ from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 data = {
-   '500211204': {'기종':'12 pro max','색상':'스톤','문구':'Hello'},
-   '500211205': {'기종':'12 mini','색상':'블랙','문구':'OSSprac'},
-   '500211208':{'기종':'13 pro','색상':'레몬','문구':'Apple'}
+   500211204: {'기종':'12 pro max','색상':'스톤','문구':'Hello'},
+   500211205: {'기종':'12 mini','색상':'블랙','문구':'OSSprac'},
+   500211208:{'기종':'13 pro','색상':'레몬','문구':'Apple'}
 }
 
 @app.route('/')
@@ -37,6 +37,10 @@ def submit():
    color=request.form.get('color')
    number=request.form.get('number')   
    return render_template('submit.html',uname=uname, type=type, color=color, number=number)
+
+@app.route('/check/<int:orderNum>')
+def check(orderNum):
+   return render_template("check.html", orderNum=orderNum, data=data.get(orderNum))
 
 if __name__ == '__main__': 
     app.run(host="0.0.0.0", debug=True, port=80)
