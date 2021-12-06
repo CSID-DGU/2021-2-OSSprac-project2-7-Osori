@@ -17,7 +17,7 @@ def login():
    error = None
    if request.method =='POST':
       if request.form['username'] != 'ossp' or request.form['password'] != 'ossp1234' :
-            error = 'Incorrect authentication credentials! Please try again. '
+            error = '올바르지 않은 로그인 정보입니다. 아이디와 비밀번호를 확인해주세요! '
       else:
          return redirect(url_for('orderList'))
    

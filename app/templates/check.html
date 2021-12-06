@@ -2,6 +2,11 @@
 <html>
     <head>
         <title>orderCheck</title>
+        <style>
+            .txt1{
+                padding: 5px;
+            }
+        </style>
     </head>
     <body>
         <h1>주문 확인 페이지</h1>
@@ -10,9 +15,9 @@
             <input type="button" value="뒤로가기" onClick="history.go(-1)">
         </form>
         <p></p>
-        <li> <b>주문번호</b>  :  {{orderNum}}</li>
+        <li class="txt1"> <b>주문번호</b>  :  {{orderNum}}</li>
         {% for key, value in data.items() %}
-                <li><b>{{ key }}</b>  :  {{ value }}</li>
+                <li class="txt1"><b>{{ key }}</b>  :  {{ value }}</li>
         {% endfor %}
     </body>
 </html>
