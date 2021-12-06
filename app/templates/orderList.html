@@ -16,14 +16,14 @@
                 <th>주문번호</th>
                 <th>기종</th>
                 <th>색상</th>
-                <th>문구</th>
+                <th>주문상태</th>
             </tr>
             {% for key, value in data.items() %}
             <tr>
                 <td><a href="/check/{{ key }}">{{ key }}</a></td>
-                {% for item in value.values() %}
-                    <td> {{ item }} </td>
-                {% endfor %}
+                <td>{{ value.get('기종') }}</td>
+                <td>{{ value.get('색상') }}</td>
+                <td>{{ value.get('상태') }}</td>
             </tr>
 
             {% endfor%}
