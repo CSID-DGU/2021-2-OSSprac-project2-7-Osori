@@ -1,15 +1,18 @@
 <!doctype html>
 <html>
+    <head>
+        <title>orderCheck</title>
+    </head>
     <body>
         <h1>주문 확인 페이지</h1>
 
         <form>
             <input type="button" value="뒤로가기" onClick="history.go(-1)">
         </form>
-        
-        <li>주문번호 : {{orderNum}}</li>
+        <p></p>
+        <li> <b>주문번호</b>  :  {{orderNum}}</li>
         {% for key, value in data.items() %}
-                <li>{{ key }} : {{ value }}</li>
+                <li><b>{{ key }}</b>  :  {{ value }}</li>
         {% endfor %}
     </body>
 </html>
