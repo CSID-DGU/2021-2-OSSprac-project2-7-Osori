@@ -8,7 +8,7 @@
    </head>
     <h1> 주문하기 </h1>
     <body>
-      <form action = "/submit" method = "POST">
+      <form id="order" action = "/submit" method = "POST">
         주문자 : <input type ="text" name ="uname" value=""><br>
         핸드폰 번호 : <input type ="text" name="number" value=""><br>
 
@@ -41,7 +41,7 @@
 
       
       </form>
-      <input type="submit" value="확인">
+      <input type="submit" value="확인" form="order">
    </body>
 </html>
 
